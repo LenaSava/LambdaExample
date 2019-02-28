@@ -24,6 +24,11 @@ public class Project {
                 }
         );
 
+                sw.addElectricityListener(
+                    () -> System.out.println("Fire!")
+                );
+
+
         sw.SwichOn();
 
     }
