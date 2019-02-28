@@ -9,6 +9,21 @@ public class Project {
         sw.addElectricityListener(lamp);
         sw.addElectricityListener(radio);
 
+//        class Fire implements ElectricityConcumer {
+//            @Override
+//            public void ElectricityOn() {
+//                System.out.println("Пожар!");
+//            }
+//        }
+        sw.addElectricityListener(
+                new ElectricityConcumer() {
+                    @Override
+                    public void ElectricityOn() {
+                        System.out.println("Пожар!");
+                    }
+                }
+        );
+
         sw.SwichOn();
 
     }
